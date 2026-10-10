@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern JavaScript Music Player</title>
+    <!-- Boxicons for clean modern UI Icons -->
+    <link href='https://unpkg.com' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="player-container">
+        <!-- Main Player Screen -->
+        <div class="music-card">
+            <div class="top-bar">
+                <span>Now Playing</span>
+                <button id="toggle-playlist-btn" title="Toggle Playlist"><i class='bx bx-list-ul'></i></button>
+            </div>
+
+            <!-- Track Info -->
+            <div class="track-details">
+                <div class="track-art" id="track-art"></div>
+                <h2 id="track-title">Song Title</h2>
+                <h3 id="track-artist">Artist Name</h3>
+            </div>
+
+            <!-- Progress & Duration -->
+            <div class="progress-container">
+                <div class="time-display">
+                    <span id="current-time">0:00</span>
+                    <span id="total-duration">0:00</span>
+                </div>
+                <input type="range" id="progress-slider" min="0" max="100" value="0">
+            </div>
+
+            <!-- Playback Controls -->
+            <div class="controls">
+                <button id="autoplay-btn" class="toggle-control" title="Autoplay On/Off">
+                    <i class='bx bx-infinite'></i>
+                </button>
+                <button id="prev-btn" title="Previous Track"><i class='bx bx-skip-previous'></i></button>
+                <button id="play-pause-btn" class="main-play" title="Play/Pause"><i class='bx bx-play'></i></button>
+                <button id="next-btn" title="Next Track"><i class='bx bx-skip-next'></i></button>
+                <div class="volume-container">
+                    <i class='bx bx-volume-full' id="volume-icon"></i>
+                    <input type="range" id="volume-slider" min="0" max="1" step="0.05" value="0.7">
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar Playlist -->
+        <div class="playlist-card" id="playlist-card">
+            <h3>Queue</h3>
+            <ul id="playlist-items">
+                <!-- JavaScript handles population here -->
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
